@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClimaApp - Tu pronóstico hoy</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts para un diseño moderno -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌦️ ClimaApp</h1>
+        </header>
+        
+        <main>
+            <section class="search-section">
+                <form id="weather-form">
+                    <input type="text" id="city-input" placeholder="Ingresa una ciudad (ej. Madrid)" required>
+                    <button type="submit">Buscar</button>
+                </form>
+            </section>
+
+            <section id="weather-display" class="weather-display hidden">
+                <div class="weather-card">
+                    <h2 id="city-name">Ciudad</h2>
+                    <div class="weather-info">
+                        <p class="temp"><span id="temperature">--</span>°C</p>
+                        <p id="weather-description">Descripción</p>
+                    </div>
+                </div>
+            </section>
+
+            <div id="loading" class="loading hidden">Buscando clima...</div>
+            <div id="error-message" class="error-message hidden"></div>
+        </main>
+
+        <footer>
+            <p>Datos por <a href="https://open-meteo.com/" target="_blank">Open-Meteo</a></p>
+        </footer>
+    </div>
+
+    <!-- Cargamos el script principal como módulo -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
